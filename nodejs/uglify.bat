@@ -1,1 +1,0 @@
-uglifyjs ../release/1.0/velocity.easeplus.js -c -m -o ../release/1.0/velocity.easeplus.min.js

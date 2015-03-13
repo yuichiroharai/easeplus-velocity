@@ -1,1 +1,0 @@
-browser-sync start --server ../sample --startPath / --files "../sample/**/*"
