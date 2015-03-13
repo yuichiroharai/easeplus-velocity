@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Sample - Ease+ for Velocity.js</title>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<script src="js/lib/jquery-2.1.3.min.js"></script>
+	<script src="js/lib/velocity.min.js"></script>
+	<script src="js/velocity.easeplus.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id="index">
+		<h1>Sample - Ease+ for Velocity.js</h1>
+
+		<h2>Back</h2>
+		<ul>
+			<li>
+				<h3>backOut</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 400, "backOut");</pre></p>
+				<div class="stage backOut">
+					<span></span>
+				</div>
+				<p><input class="backOut" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>backIn</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 400, "backIn");</pre></p>
+				<div class="stage backIn">
+					<span></span>
+				</div>
+				<p><input class="backIn" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>backInOut</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 400, "backInOut");</pre></p>
+				<div class="stage backInOut">
+					<span></span>
+				</div>
+				<p><input class="backInOut" type="button" value="start"></p>
+			</li>
+		</ul>
+
+
+
+
+
+
+		<h2>Elastic</h2>
+		<ul>
+			<li>
+				<h3>elasticOut</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "elasticOut");</pre></p>
+				<div class="stage elasticOut">
+					<span></span>
+				</div>
+				<p><input class="elasticOut" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>elasticIn</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "elasticIn");</pre></p>
+				<div class="stage elasticIn">
+					<span></span>
+				</div>
+				<p><input class="elasticIn" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>elasticInOut</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "elasticInOut");</pre></p>
+				<div class="stage elasticInOut">
+					<span></span>
+				</div>
+				<p><input class="elasticInOut" type="button" value="start"></p>
+			</li>
+		</ul>
+
+
+
+
+
+
+		<h2>Bounce</h2>
+		<ul>
+			<li>
+				<h3>bounceOut</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "bounceOut");</pre></p>
+				<div class="stage bounceOut">
+					<span></span>
+				</div>
+				<p><input class="bounceOut" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>bounceIn</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "bounceIn");</pre></p>
+				<div class="stage bounceIn">
+					<span></span>
+				</div>
+				<p><input class="bounceIn" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>bounceInOut</h3>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "bounceInOut");</pre></p>
+				<div class="stage bounceInOut">
+					<span></span>
+				</div>
+				<p><input class="bounceInOut" type="button" value="start"></p>
+			</li>
+		</ul>
+
+
+
+
+
+		<h2>Custom Back</h2>
+		<ul>
+			<li>
+				<h3>customBackOut</h3>
+				<p><pre>
+// イージング関数を新たに登録する、名前は任意、重複してたら上書き
+// デフォルトは1.7
+$.easeplus.addBackOut("customBackOut", 4.0);
+$element.velocity({ translateX:300 }, 400, "customBackOut");
+...
+// 使わなくなったら削除も可能
+$.easeplus.removeBackOut("customBackOut");</pre></p>
+				<div class="stage customBackOut">
+					<span></span>
+				</div>
+				<p><input class="customBackOut" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>customBackIn</h3>
+				<p><pre>
+// イージング関数を新たに登録する、名前は任意、重複してたら上書き
+// デフォルトは1.7
+$.easeplus.addBackIn("customBackIn", 4.0);
+$element.velocity({ translateX:300 }, 400, "customBackIn");
+...
+// 使わなくなったら削除も可能
+$.easeplus.removeBackIn("customBackIn");</pre></p>
+				<div class="stage customBackIn">
+					<span></span>
+				</div>
+				<p><input class="customBackIn" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>customBackInOut</h3>
+				<p><pre>
+// イージング関数を新たに登録する、名前は任意、重複してたら上書き
+// デフォルトは1.7
+$.easeplus.addBackInOut("customBackInOut", 4.0);
+$element.velocity({ translateX:300 }, 400, "customBackInOut");
+...
+// 使わなくなったら削除も可能
+$.easeplus.removeBackInOut("customBackInOut");</pre></p>
+				<div class="stage customBackInOut">
+					<span></span>
+				</div>
+				<p><input class="customBackInOut" type="button" value="start"></p>
+			</li>
+		</ul>
+
+
+
+
+
+
+
+		<h2>Custom Elastic</h2>
+		<ul>
+			<li>
+				<h3>customElasticOut</h3>
+				<p><pre>
+// イージング関数を新たに登録する、名前は任意、重複してたら上書き
+// デフォルトは1, 0.3
+$.easeplus.addElasticOut("customElasticOut", 3, 0.3);
+$element.velocity({ translateX:300 }, 800, "customElasticOut");
+...
+// 使わなくなったら削除も可能
+$.easeplus.removeElasticOut("customElasticOut");</pre></p>
+				<div class="stage customElasticOut">
+					<span></span>
+				</div>
+				<p><input class="customElasticOut" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>customElasticIn</h3>
+				<p><pre>
+// イージング関数を新たに登録する、名前は任意、重複してたら上書き
+// デフォルトは1, 0.3
+$.easeplus.addElasticIn("customElasticIn", 3, 0.3);
+$element.velocity({ translateX:300 }, 800, "customElasticIn");
+...
+// 使わなくなったら削除も可能
+$.easeplus.removeElasticIn("customElasticIn");</pre></p>
+				<div class="stage customElasticIn">
+					<span></span>
+				</div>
+				<p><input class="customElasticIn" type="button" value="start"></p>
+			</li>
+
+			<li>
+				<h3>customElasticInOut</h3>
+				<p><pre>
+// イージング関数を新たに登録する、名前は任意、重複してたら上書き
+// デフォルトは1, 0.3*1.5
+$.easeplus.addElasticInOut("customElasticInOut", 3, 0.3*1.5);
+$element.velocity({ translateX:300 }, 800, "customElasticInOut");
+...
+// 使わなくなったら削除も可能
+$.easeplus.removeElasticInOut("customElasticInOut");</pre></p>
+				<div class="stage customElasticInOut">
+					<span></span>
+				</div>
+				<p><input class="customElasticInOut" type="button" value="start"></p>
+			</li>
+		</ul>
+
+
+
+
+	</div>
+
+
+
+</body>
+</html>

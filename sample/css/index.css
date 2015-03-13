@@ -1,0 +1,51 @@
+/* --------------------------------------------------
+// index.html
+-------------------------------------------------- */
+#index {
+	margin: 32px;
+}
+
+#index h1 {
+	font-size: 32px;
+}
+
+#index h2 {
+	font-size: 32px;
+	margin: 48px 0 0 0;
+}
+
+#index h3 {
+	font-size: 16px;
+}
+
+#index ul {
+	list-style: none;
+	margin: 16px 0 0 0;
+	width: 600px;
+}
+
+#index ul li {
+	padding: 0 0 48px 0;
+}
+
+.stage {
+	border-radius: 8px;
+	border: solid 1px #ccc;
+	margin: 16px 0;
+	height: 64px;
+
+	position: relative;
+}
+
+.stage span {
+	background-color: #000;
+	width: 32px;
+	height: 32px;
+	border-radius: 32px;
+	margin: -16px 0 0 -16px;
+
+	display: block;
+	position: absolute;
+	left: 150px;
+	top: 32px;
+}
