@@ -28,6 +28,11 @@
 	padding: 0 0 48px 0;
 }
 
+#index .box {
+	margin: 16px 0 48px 0;
+	width: 600px;
+}
+
 .stage {
 	border-radius: 8px;
 	border: solid 1px #ccc;

@@ -26,7 +26,7 @@
 		<ul>
 			<li>
 				<h3>backOut</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 400, "backOut");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 400, "easeOutBack");</pre></p>
 				<div class="stage backOut">
 					<span></span>
 				</div>
@@ -35,7 +35,7 @@
 
 			<li>
 				<h3>backIn</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 400, "backIn");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 400, "easeInBack");</pre></p>
 				<div class="stage backIn">
 					<span></span>
 				</div>
@@ -44,7 +44,7 @@
 
 			<li>
 				<h3>backInOut</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 400, "backInOut");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 400, "easeInOutBack");</pre></p>
 				<div class="stage backInOut">
 					<span></span>
 				</div>
@@ -61,7 +61,7 @@
 		<ul>
 			<li>
 				<h3>elasticOut</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 800, "elasticOut");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "easeOutElastic");</pre></p>
 				<div class="stage elasticOut">
 					<span></span>
 				</div>
@@ -70,7 +70,7 @@
 
 			<li>
 				<h3>elasticIn</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 800, "elasticIn");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "easeInElastic");</pre></p>
 				<div class="stage elasticIn">
 					<span></span>
 				</div>
@@ -79,7 +79,7 @@
 
 			<li>
 				<h3>elasticInOut</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 800, "elasticInOut");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "easeInOutElastic");</pre></p>
 				<div class="stage elasticInOut">
 					<span></span>
 				</div>
@@ -96,7 +96,7 @@
 		<ul>
 			<li>
 				<h3>bounceOut</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 800, "bounceOut");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "easeOutBounce");</pre></p>
 				<div class="stage bounceOut">
 					<span></span>
 				</div>
@@ -105,7 +105,7 @@
 
 			<li>
 				<h3>bounceIn</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 800, "bounceIn");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "easeInBounce");</pre></p>
 				<div class="stage bounceIn">
 					<span></span>
 				</div>
@@ -114,7 +114,7 @@
 
 			<li>
 				<h3>bounceInOut</h3>
-				<p><pre>$element.velocity({ translateX:300 }, 800, "bounceInOut");</pre></p>
+				<p><pre>$element.velocity({ translateX:300 }, 800, "easeInOutBounce");</pre></p>
 				<div class="stage bounceInOut">
 					<span></span>
 				</div>
@@ -234,7 +234,96 @@ $.easeplus.removeElasticInOut("customElasticInOut");</pre></p>
 			</li>
 		</ul>
 
+		<h2>Alias</h2>
+		<div class="box">
+			<p>下記の文字列でも指定ができます。</p>
+			<p><pre>easeInSine -> sineIn
+easeOutSine -> sineOut
+easeInOutSine -> sineInOut
 
+easeInQuad -> quadIn
+easeOutQuad -> quadOut
+easeInOutQuad -> quadInOut
+
+easeInCubic -> cubicIn
+easeOutCubic -> cubicOut
+easeInOutCubic -> cubicInOut
+
+easeInQuart -> quartIn
+easeOutQuart -> quartOut
+easeInOutQuart -> quartInOut
+
+easeInQuint -> quintIn
+easeOutQuint -> quintOut
+easeInOutQuint -> quintInOut
+
+easeInExpo -> expoIn
+easeOutExpo -> expoOut
+easeInOutExpo -> expoInOut
+
+easeInCirc -> circIn
+easeOutCirc -> circOut
+easeInOutCirc -> circInOut
+
+easeInBack -> backIn
+easeOutBack -> backOut
+easeInOutBack -> backInOut
+
+easeInElastic -> elasticIn
+easeOutElastic -> elasticOut
+easeInOutElastic -> elasticInOut
+
+easeInBounce -> bounceIn
+easeOutBounce -> bounceOut
+easeInOutBounce -> bounceInOut</pre></p>
+			<div class="stage alias">
+				<span></span>
+			</div>
+			<p>
+				<input class="alias" type="button" value="start">
+				<select class="ease" name="ease">
+					<option value="sineOut">sineOut</option>
+					<option value="sineIn">sineIn</option>
+					<option value="sineInOut">sineInOut</option>
+
+					<option value="quadOut">quadOut</option>
+					<option value="quadIn">quadIn</option>
+					<option value="quadInOut">quadInOut</option>
+
+					<option value="cubicOut">cubicOut</option>
+					<option value="cubicIn">cubicIn</option>
+					<option value="cubicInOut">cubicInOut</option>
+
+					<option value="quartOut">quartOut</option>
+					<option value="quartIn">quartIn</option>
+					<option value="quartInOut">quartInOut</option>
+
+					<option value="quintOut">quintOut</option>
+					<option value="quintIn">quintIn</option>
+					<option value="quintInOut">quintInOut</option>
+
+					<option value="expoOut">expoOut</option>
+					<option value="expoIn">expoIn</option>
+					<option value="expoInOut">expoInOut</option>
+
+					<option value="circOut">circOut</option>
+					<option value="circIn">circIn</option>
+					<option value="circInOut">circInOut</option>
+
+					<option value="backOut">backOut</option>
+					<option value="backIn">backIn</option>
+					<option value="backInOut">backInOut</option>
+
+					<option value="elasticOut">elasticOut</option>
+					<option value="elasticIn">elasticIn</option>
+					<option value="elasticInOut">elasticInOut</option>
+
+					<option value="bounceOut">bounceOut</option>
+					<option value="bounceIn">bounceIn</option>
+					<option value="bounceInOut">bounceInOut</option>
+				</select>
+			</p>
+		</div>
 
 
 	</div>

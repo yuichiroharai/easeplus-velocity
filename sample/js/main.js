@@ -6,7 +6,7 @@ $(document).ready(function () {
 		$(".backOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:400, easing:"backOut", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:400, easing:"easeOutBack", delay:100 })
 	});
 
 	// backIn
@@ -14,7 +14,7 @@ $(document).ready(function () {
 		$(".backIn span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:400, easing:"backIn", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:400, easing:"easeInBack", delay:100 })
 	});
 
 	// backInOut
@@ -22,7 +22,7 @@ $(document).ready(function () {
 		$(".backInOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:400, easing:"backInOut", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:400, easing:"easeInOutBack", delay:100 })
 	});
 
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
 		$(".elasticOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"elasticOut", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"easeOutElastic", delay:100 })
 	});
 
 	// elasticIn
@@ -41,7 +41,7 @@ $(document).ready(function () {
 		$(".elasticIn span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"elasticIn", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"easeInElastic", delay:100 })
 	});
 
 	// elasticInOut
@@ -49,7 +49,7 @@ $(document).ready(function () {
 		$(".elasticInOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"elasticInOut", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"easeInOutElastic", delay:100 })
 	});
 
 
@@ -59,7 +59,7 @@ $(document).ready(function () {
 		$(".bounceOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"bounceOut", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"easeOutBounce", delay:100 })
 	});
 
 	// bounceIn
@@ -67,7 +67,7 @@ $(document).ready(function () {
 		$(".bounceIn span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"bounceIn", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"easeInBounce", delay:100 })
 	});
 
 	// bounceInOut
@@ -75,7 +75,7 @@ $(document).ready(function () {
 		$(".bounceInOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
-			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"bounceInOut", delay:100 })
+			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"easeInOutBounce", delay:100 })
 	});
 
 
@@ -142,4 +142,11 @@ $(document).ready(function () {
 			.velocity({ translateX:300 }, { queue:false, duration:800, easing:"customElasticInOut", delay:100 });
 	});
 
+	// alias
+	$("input.alias").click(function(){
+		$(".alias span")
+			.velocity("stop")
+			.velocity({ translateX:0 }, 0)
+			.velocity({ translateX:300 }, { queue:false, duration:600, easing:$("select.ease").val(), delay:100 })
+	});
 });
