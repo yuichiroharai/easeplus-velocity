@@ -8,12 +8,22 @@
 
 ## Download
 
-### v1.0 (for Velocity.js v1.2.2)
+### v1.1 (for Velocity.js v1.2.2)
 
-[velocity.easeplus.min.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.0/velocity.easeplus.min.js) - 圧縮版
+[velocity.easeplus.min.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.1/velocity.easeplus.min.js) - 圧縮版
 
-[velocity.easeplus.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.0/velocity.easeplus.js) - 通常版
+[velocity.easeplus.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.1/velocity.easeplus.js) - 通常版
 
 ## Sample
 
 [Sample - Ease+ for Velocity.js](http://yuichiroharai.github.io/easeplus-velocity/sample/)
+
+
+## History
+
+### v1.1
+
+* イージング名をjQuery方式に合わせて変更
+    * backOut → easeOutBack など
+* さらに、全てのイージング名に別名を追加してどちらの方式でも指定できるように変更
+    * easeOutSine → sineOut など
