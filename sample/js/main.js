@@ -83,7 +83,7 @@ $(document).ready(function () {
 	// customBackOut
 	$("input.customBackOut").click(function(){
 		$.easeplus.addBackOut("customBackOut", 4.0);
-		//$.easeplus.removeBackOut("customBackOut");
+		//$.easeplus.remove("customBackOut");
 		$(".customBackOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
@@ -93,7 +93,7 @@ $(document).ready(function () {
 	// customBackIn
 	$("input.customBackIn").click(function(){
 		$.easeplus.addBackIn("customBackIn", 4.0);
-		//$.easeplus.removeBackIn("customBackIn");
+		//$.easeplus.remove("customBackIn");
 		$(".customBackIn span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
@@ -103,7 +103,7 @@ $(document).ready(function () {
 	// customBackInOut
 	$("input.customBackInOut").click(function(){
 		$.easeplus.addBackInOut("customBackInOut", 4.0);
-		//$.easeplus.removeBackInOut("customBackInOut");
+		//$.easeplus.remove("customBackInOut");
 		$(".customBackInOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
@@ -115,7 +115,7 @@ $(document).ready(function () {
 	// customElasticOut
 	$("input.customElasticOut").click(function(){
 		$.easeplus.addElasticOut("customElasticOut", 3, 0.3);
-		//$.easeplus.removeElasticOut("customElasticOut");
+		//$.easeplus.remove("customElasticOut");
 		$(".customElasticOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
@@ -125,7 +125,7 @@ $(document).ready(function () {
 	// customElasticIn
 	$("input.customElasticIn").click(function(){
 		$.easeplus.addElasticIn("customElasticIn", 3, 0.3);
-		//$.easeplus.removeElasticIn("customElasticIn");
+		//$.easeplus.remove("customElasticIn");
 		$(".customElasticIn span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
@@ -135,7 +135,7 @@ $(document).ready(function () {
 	// customElasticInOut
 	$("input.customElasticInOut").click(function(){
 		$.easeplus.addElasticInOut("customElasticInOut", 3, 0.3*1.5);
-		//$.easeplus.removeElasticInOut("customElasticInOut");
+		//$.easeplus.remove("customElasticInOut");
 		$(".customElasticInOut span")
 			.velocity("stop")
 			.velocity({ translateX:0 }, 0)
@@ -149,4 +149,14 @@ $(document).ready(function () {
 			.velocity({ translateX:0 }, 0)
 			.velocity({ translateX:300 }, { queue:false, duration:600, easing:$("select.ease").val(), delay:100 })
 	});
+
+	// blend
+	$("input.blend").click(function(){
+		$.easeplus.addBlend("blend", $("select.ease1").val(), $("select.ease2").val(), $("select.easeMix").val());
+		$(".blend span")
+			.velocity("stop")
+			.velocity({ translateX:0 }, 0)
+			.velocity({ translateX:300 }, { queue:false, duration:600, easing:"blend", delay:100 })
+	});
+
 });

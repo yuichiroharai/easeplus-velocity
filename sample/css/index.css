@@ -29,7 +29,8 @@
 }
 
 #index .box {
-	margin: 16px 0 48px 0;
+	margin: 16px 0 0 0;
+	padding: 0 0 48px 0;
 	width: 600px;
 }
 

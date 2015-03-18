@@ -4,22 +4,28 @@
 
 イージング関数は[TweenJS(CreateJS)](http://createjs.com/TweenJS)から拝借。
 
-また、Back, Elasticの強さをカスタムできる機能もあります。
+また、Back, Elasticの強さをカスタムしたり、イージングをブレンドする機能もあります。
 
 ## Download
 
-### v1.1 (for Velocity.js v1.2.2)
+### v1.2 (for Velocity.js v1.2.2)
 
-[velocity.easeplus.min.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.1/velocity.easeplus.min.js) - 圧縮版
+[velocity.easeplus.min.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.2/velocity.easeplus.min.js) - 圧縮版
 
-[velocity.easeplus.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.1/velocity.easeplus.js) - 通常版
+[velocity.easeplus.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.2/velocity.easeplus.js) - 通常版
 
 ## Sample
 
 [Sample - Ease+ for Velocity.js](http://yuichiroharai.github.io/easeplus-velocity/sample/)
 
-
 ## History
+
+### v1.2
+
+* 2つのイージングをブレンドしてカスタムできる機能を追加
+    * $.easeplus.addBlend("easeName", "cubicIn", "backOut", "sineOut");
+* カスタムしたイージングの削除するメソッドをひとつに統一
+    * removeBackOut など → remove
 
 ### v1.1
 
