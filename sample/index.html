@@ -137,7 +137,7 @@ $.easeplus.addBackOut("customBackOut", 4.0);
 $element.velocity({ translateX:300 }, 400, "customBackOut");
 ...
 // 使わなくなったら削除も可能
-$.easeplus.removeBackOut("customBackOut");</pre></p>
+$.easeplus.remove("customBackOut");</pre></p>
 				<div class="stage customBackOut">
 					<span></span>
 				</div>
@@ -153,7 +153,7 @@ $.easeplus.addBackIn("customBackIn", 4.0);
 $element.velocity({ translateX:300 }, 400, "customBackIn");
 ...
 // 使わなくなったら削除も可能
-$.easeplus.removeBackIn("customBackIn");</pre></p>
+$.easeplus.remove("customBackIn");</pre></p>
 				<div class="stage customBackIn">
 					<span></span>
 				</div>
@@ -169,7 +169,7 @@ $.easeplus.addBackInOut("customBackInOut", 4.0);
 $element.velocity({ translateX:300 }, 400, "customBackInOut");
 ...
 // 使わなくなったら削除も可能
-$.easeplus.removeBackInOut("customBackInOut");</pre></p>
+$.easeplus.remove("customBackInOut");</pre></p>
 				<div class="stage customBackInOut">
 					<span></span>
 				</div>
@@ -194,7 +194,7 @@ $.easeplus.addElasticOut("customElasticOut", 3, 0.3);
 $element.velocity({ translateX:300 }, 800, "customElasticOut");
 ...
 // 使わなくなったら削除も可能
-$.easeplus.removeElasticOut("customElasticOut");</pre></p>
+$.easeplus.remove("customElasticOut");</pre></p>
 				<div class="stage customElasticOut">
 					<span></span>
 				</div>
@@ -210,7 +210,7 @@ $.easeplus.addElasticIn("customElasticIn", 3, 0.3);
 $element.velocity({ translateX:300 }, 800, "customElasticIn");
 ...
 // 使わなくなったら削除も可能
-$.easeplus.removeElasticIn("customElasticIn");</pre></p>
+$.easeplus.remove("customElasticIn");</pre></p>
 				<div class="stage customElasticIn">
 					<span></span>
 				</div>
@@ -226,7 +226,7 @@ $.easeplus.addElasticInOut("customElasticInOut", 3, 0.3*1.5);
 $element.velocity({ translateX:300 }, 800, "customElasticInOut");
 ...
 // 使わなくなったら削除も可能
-$.easeplus.removeElasticInOut("customElasticInOut");</pre></p>
+$.easeplus.remove("customElasticInOut");</pre></p>
 				<div class="stage customElasticInOut">
 					<span></span>
 				</div>
@@ -283,6 +283,159 @@ easeInOutBounce -> bounceInOut</pre></p>
 				<input class="alias" type="button" value="start">
 				<select class="ease" name="ease">
 					<option value="sineOut">sineOut</option>
+					<option value="sineIn">sineIn</option>
+					<option value="sineInOut">sineInOut</option>
+
+					<option value="quadOut">quadOut</option>
+					<option value="quadIn">quadIn</option>
+					<option value="quadInOut">quadInOut</option>
+
+					<option value="cubicOut">cubicOut</option>
+					<option value="cubicIn">cubicIn</option>
+					<option value="cubicInOut">cubicInOut</option>
+
+					<option value="quartOut">quartOut</option>
+					<option value="quartIn">quartIn</option>
+					<option value="quartInOut">quartInOut</option>
+
+					<option value="quintOut">quintOut</option>
+					<option value="quintIn">quintIn</option>
+					<option value="quintInOut">quintInOut</option>
+
+					<option value="expoOut">expoOut</option>
+					<option value="expoIn">expoIn</option>
+					<option value="expoInOut">expoInOut</option>
+
+					<option value="circOut">circOut</option>
+					<option value="circIn">circIn</option>
+					<option value="circInOut">circInOut</option>
+
+					<option value="backOut">backOut</option>
+					<option value="backIn">backIn</option>
+					<option value="backInOut">backInOut</option>
+
+					<option value="elasticOut">elasticOut</option>
+					<option value="elasticIn">elasticIn</option>
+					<option value="elasticInOut">elasticInOut</option>
+
+					<option value="bounceOut">bounceOut</option>
+					<option value="bounceIn">bounceIn</option>
+					<option value="bounceInOut">bounceInOut</option>
+				</select>
+			</p>
+		</div>
+
+
+		<h2>Blend</h2>
+		<div class="box">
+			<p><pre>
+// ブレンドするイージング関数を新たに登録する、名前は任意、重複してたら上書き
+// 引数は
+// ・名前
+// ・イージング1
+// ・イージング2
+// ・イージング1から2に移行する比率を調整するイージング(デフォルトはlinear)
+$.easeplus.addBlend("blend", "cubicIn", "backOut", "sineOut");
+$element.velocity({ translateX:300 }, 600, "blend");
+...
+// 使わなくなったら削除も可能
+$.easeplus.remove("blend");</pre></p>
+</pre></p>
+			<div class="stage blend">
+				<span></span>
+			</div>
+			<p>
+				<input class="blend" type="button" value="start">
+				<select class="ease1" name="ease1">
+					<option value="linear">linear</option>
+
+					<option value="sineOut">sineOut</option>
+					<option value="sineIn">sineIn</option>
+					<option value="sineInOut">sineInOut</option>
+
+					<option value="quadOut">quadOut</option>
+					<option value="quadIn">quadIn</option>
+					<option value="quadInOut">quadInOut</option>
+
+					<option value="cubicOut">cubicOut</option>
+					<option value="cubicIn" selected>cubicIn</option>
+					<option value="cubicInOut">cubicInOut</option>
+
+					<option value="quartOut">quartOut</option>
+					<option value="quartIn">quartIn</option>
+					<option value="quartInOut">quartInOut</option>
+
+					<option value="quintOut">quintOut</option>
+					<option value="quintIn">quintIn</option>
+					<option value="quintInOut">quintInOut</option>
+
+					<option value="expoOut">expoOut</option>
+					<option value="expoIn">expoIn</option>
+					<option value="expoInOut">expoInOut</option>
+
+					<option value="circOut">circOut</option>
+					<option value="circIn">circIn</option>
+					<option value="circInOut">circInOut</option>
+
+					<option value="backOut">backOut</option>
+					<option value="backIn">backIn</option>
+					<option value="backInOut">backInOut</option>
+
+					<option value="elasticOut">elasticOut</option>
+					<option value="elasticIn">elasticIn</option>
+					<option value="elasticInOut">elasticInOut</option>
+
+					<option value="bounceOut">bounceOut</option>
+					<option value="bounceIn">bounceIn</option>
+					<option value="bounceInOut">bounceInOut</option>
+				</select>
+				<select class="ease2" name="ease2">
+					<option value="linear">linear</option>
+
+					<option value="sineOut">sineOut</option>
+					<option value="sineIn">sineIn</option>
+					<option value="sineInOut">sineInOut</option>
+
+					<option value="quadOut">quadOut</option>
+					<option value="quadIn">quadIn</option>
+					<option value="quadInOut">quadInOut</option>
+
+					<option value="cubicOut">cubicOut</option>
+					<option value="cubicIn">cubicIn</option>
+					<option value="cubicInOut">cubicInOut</option>
+
+					<option value="quartOut">quartOut</option>
+					<option value="quartIn">quartIn</option>
+					<option value="quartInOut">quartInOut</option>
+
+					<option value="quintOut">quintOut</option>
+					<option value="quintIn">quintIn</option>
+					<option value="quintInOut">quintInOut</option>
+
+					<option value="expoOut">expoOut</option>
+					<option value="expoIn">expoIn</option>
+					<option value="expoInOut">expoInOut</option>
+
+					<option value="circOut">circOut</option>
+					<option value="circIn">circIn</option>
+					<option value="circInOut">circInOut</option>
+
+					<option value="backOut" selected>backOut</option>
+					<option value="backIn">backIn</option>
+					<option value="backInOut">backInOut</option>
+
+					<option value="elasticOut">elasticOut</option>
+					<option value="elasticIn">elasticIn</option>
+					<option value="elasticInOut">elasticInOut</option>
+
+					<option value="bounceOut">bounceOut</option>
+					<option value="bounceIn">bounceIn</option>
+					<option value="bounceInOut">bounceInOut</option>
+				</select>
+				<select class="easeMix" name="easeMix">
+					<option value="linear">linear</option>
+
+					<option value="sineOut" selected>sineOut</option>
 					<option value="sineIn">sineIn</option>
 					<option value="sineInOut">sineInOut</option>
 
