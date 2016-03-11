@@ -1,0 +1,23 @@
+{
+  "name": "easeplus-velocity",
+  "version": "1.2.0",
+  "description": "Ease+ for Velocity.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://yuichiroharai@github.com/yuichiroharai/easeplus-velocity.git"
+  },
+  "author": {
+    "name": "Yuichiroh Arai",
+    "url": "http://www.yuichiroharai.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuichiroharai/easeplus-velocity/issues"
+  },
+  "homepage": "https://github.com/yuichiroharai/easeplus-velocity#readme",
+  "private": "true"
+}
