@@ -1,4 +1,4 @@
-// Type definitions for Ease+ v1.2
+// Type definitions for Ease+ for Velocity.js v1.2
 // Project: https://github.com/yuichiroharai/easeplus-velocity/
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/easeplus-velocity/
