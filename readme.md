@@ -14,6 +14,17 @@
 
 [velocity.easeplus.js](http://yuichiroharai.github.io/easeplus-velocity/release/1.2/velocity.easeplus.js) - 通常版
 
+## Install
+
+### npm
+```
+npm install https://github.com/yuichiroharai/easeplus-velocity.git
+```
+### Bower
+```
+bower install https://github.com/yuichiroharai/easeplus-velocity.git
+```
+
 ## Sample
 
 [Sample - Ease+ for Velocity.js](http://yuichiroharai.github.io/easeplus-velocity/sample/)
